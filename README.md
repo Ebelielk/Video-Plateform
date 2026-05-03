@@ -6,7 +6,7 @@ Une mini plateforme vidéo construite avec **HTML5, JavaScript vanilla et Tailwi
 
 ## 🚀 Demo
 
-> (Ajoute ici ton lien GitHub Pages ou Vercel)
+>  https://ebelielk.github.io/Video-Plateform/
 
 ---
 
@@ -74,8 +74,7 @@ video-platform/
 
 ```bash
 # clone le repo
-git clone https://github.com/ton-username/video-platform.git
-
+git clone  https://ebelielk.github.io/Video-Plateform/
 # ouvre le projet
 cd video-platform
 
