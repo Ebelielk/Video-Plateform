@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Video Platform</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body class="bg-[#0f172a] text-white">
+
+<div id="app" class="min-h-screen flex flex-col md:flex-row">
+
+    <button id="menuBtn"
+        class="md:hidden fixed top-4 left-4 z-50 bg-white/10 p-2 rounded-lg backdrop-blur">
+        ☰
+    </button>
+
+    <div id="overlay"
+  class="fixed inset-0 bg-black/50 hidden z-40"></div>
+
+  <!-- SIDEBAR -->
+  <aside id="sidebar"
+  class="fixed md:static top-0 left-0 h-full
+         w-64 lg:w-72 xl:w-80
+         p-4 border-r border-white/10 backdrop-blur-md
+         bg-[#020617]
+         transform -translate-x-full md:translate-x-0
+         transition-transform duration-300 z-50">
+
+  <h1 class="text-xl font-bold mb-4">My Videos</h1>
+  <div id="videoList" class="space-y-3"></div>
+
+</aside>
+
+  <!-- MAIN PLAYER -->
+  <main class="flex-1 flex items-center justify-center p-4 md:p-6">
+
+    <div class="video-container w-full max-w-4xl relative group">
+
+      <video id="video" class="w-full rounded-xl">
+        <source src="" type="video/mp4" />
+      </video>
+
+      <!-- CONTROLS -->
+      <div id="controls"
+           class="absolute bottom-0 left-0 w-full p-4 
+                  bg-gradient-to-t from-black/80 via-black/40 to-transparent
+                  opacity-0 group-hover:opacity-100 transition">
+
+        <input id="progress" type="range" value="0" min="0" max="100" class="w-full mb-3">
+
+        <div class="flex items-center justify-between">
+
+          <div class="flex items-center gap-3">
+            <button id="playBtn">▶</button>
+            <button id="muteBtn">🔊</button>
+            <input id="volume" type="range" min="0" max="1" step="0.05" value="1">
+          </div>
+
+          <span id="time" class="text-sm opacity-70">0:00 / 0:00</span>
+
+          <button id="fullscreenBtn">⛶</button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
